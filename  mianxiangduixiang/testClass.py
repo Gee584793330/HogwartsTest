@@ -19,7 +19,8 @@ class Person:
     #
     # def set_age(self,age):
     #     self.age=age
-
+    # 定义为类方法
+    @classmethod
     def eat(self):
         print("eating")
 
@@ -30,7 +31,11 @@ class Person:
         print("Jumping")
 
 # 类方法和实例方法的使用
-
+# 类方法是不能访问实例方法的
+# 类方法需要增加修饰器@classmethod
+Person.eat()
+# zs = Person('张三',20,'男',213)
+# zs.eat()
 
 
 # zs = Person('张三',20,'男',213)
